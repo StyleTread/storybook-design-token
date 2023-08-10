@@ -93,25 +93,13 @@
     "@storybook/theming": "^7.0.0",
     "@storybook/types": "^7.0.0",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "vite": "> 4.0.0",
-    "@storybook/react-vite": "^7.0.0",
-    "@vitejs/plugin-react": "^3.1.0"
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "peerDependenciesMeta": {
     "react": {
       "optional": true
     },
     "react-dom": {
-      "optional": true
-    },
-    "vite": {
-      "optional": true
-    },
-    "@storybook/react-vite": {
-      "optional": true
-    },
-    "@vitejs/plugin-react": {
       "optional": true
     }
   },
