@@ -1,6 +1,6 @@
 {
   "name": "storybook-design-token",
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-beta.5",
   "description": "Storybook addon to display design token documentation generated from your stylesheets and icon files.",
   "keywords": [
     "design token",
@@ -53,8 +53,8 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "prebuild": "yarn clean",
-    "build": "tsup & yarn build:preset",
+    "prebuild": "npm run clean",
+    "build": "tsup & npm run build:preset",
     "build:watch": "tsup --watch",
     "build:preset": "tsup --config tsup.node.config.ts",
     "build:preset:watch": "tsup --config tsup.node.config.ts --watch",
@@ -74,7 +74,6 @@
     "@types/node": "^18.15.0",
     "@types/prettier": "^2.7.2",
     "@types/react": "^18.0.34",
-
     "npm-run-all": "^4.1.5",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
@@ -108,6 +107,12 @@
     },
     "vite": {
       "optional": true
+    },
+    "@storybook/react-vite": {
+      "optional": true
+    },
+    "@vitejs/plugin-react": {
+      "optional": true
     }
   },
   "publishConfig": {
@@ -138,5 +143,13 @@
     "react-storage-hooks": "^4.0.1",
     "react-use-clipboard": "^1.0.9",
     "react-virtual": "^2.10.4"
+  },
+  "overrides": {
+    "react-storage-hooks": {
+      "react": "$react"
+    },
+    "react-virtual": {
+      "react": "$react"
+    }
   }
 }
